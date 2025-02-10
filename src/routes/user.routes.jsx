@@ -1,9 +1,7 @@
-
-
 import { Spin } from "antd";
 import React, { Suspense } from "react";
 
-
+const UserLayout = React.lazy(() => import("@/layouts/user/UserLayout"));
 const contentStyle = {
   padding: 50,
   background: "rgba(0, 0, 0, 0.05)",
@@ -25,7 +23,10 @@ const LazyLoad = ({ children }) => {
 };
 
 const userRouters = [
-  
+  {
+    path: "/exam",
+    element: <UserLayout />,
+  },
 ];
 
 export default userRouters;
